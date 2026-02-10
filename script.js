@@ -63,7 +63,7 @@ document.addEventListener('visibilitychange',
 
 
 var typed = new Typed(".typing-text", {
-    strings: ["Aspiring Software Engineer",""],
+    strings: ["Software Engineer","Backend Developer", ""],
     loop: true,
     typeSpeed: 80,
     backSpeed: 60,
@@ -74,6 +74,21 @@ form.addEventListener('submit',(event)=>{
     
     
     });
+
+// Trigger a single wave on load (respect user's reduced-motion setting)
+document.addEventListener('DOMContentLoaded', function () {
+    try {
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReduced) return;
+        const wave = document.querySelector('.wave');
+        if (!wave) return;
+        // add class to start animation, remove when done
+        wave.classList.add('wave-on');
+        wave.addEventListener('animationend', function () { wave.classList.remove('wave-on'); }, { once: true });
+    } catch (e) {
+        // fail silently
+    }
+});
   
 
 
