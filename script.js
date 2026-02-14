@@ -51,7 +51,7 @@ function handleClick(event) {
 document.addEventListener('visibilitychange',
   function () {
       if (document.visibilityState === "visible") {
-          document.title = "Ruthwik's Portfolio";
+          document.title = "Sathwiks's Portfolio";
           $("#favicon").attr("href", "assets/images/favicon.png");
       }
       else {
@@ -63,7 +63,7 @@ document.addEventListener('visibilitychange',
 
 
 var typed = new Typed(".typing-text", {
-    strings: ["Software Engineer","Backend Developer", ""],
+    strings: ["Aspiring Doctor","Medical Enthusiast", ""],
     loop: true,
     typeSpeed: 80,
     backSpeed: 60,
